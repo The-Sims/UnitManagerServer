@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea838ec-53ba-47e0-babc-e109460e340f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageConfirmOrder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/MessageConcludeOrder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/MessageRegister.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/ConfirmOrderMessage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/UnitListUpdateMessage.java" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/OrderMessage.java" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageOrder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,6 +93,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Jelle Geraets &lt;jellegeraets@hotmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -363,12 +361,20 @@
       <updated>1537266344608</updated>
       <workItem from="1537266348749" duration="1651000" />
       <workItem from="1537347679121" duration="1855000" />
-      <workItem from="1539069953368" duration="4169000" />
+      <workItem from="1539069953368" duration="4193000" />
     </task>
+    <task id="LOCAL-00001" summary="messages">
+      <created>1539074533854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539074533854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7675000" />
+    <option name="totallyTimeSpent" value="7699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -409,6 +415,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
