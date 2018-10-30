@@ -1,3 +1,4 @@
+import clienthandler.ClientHandler;
 import clienthandler.IClientHandler;
 import communication.messagegenerator.IMessageGenerator;
 import communication.messagegenerator.MessageGenerator;
