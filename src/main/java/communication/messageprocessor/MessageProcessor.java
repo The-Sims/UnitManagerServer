@@ -1,5 +1,6 @@
 package communication.messageprocessor;
 
+import clienthandler.IClientHandler;
 import communication.messagehandlers.IMessageHandler;
 import communication.messagehandlers.IMessageHandlerFactory;
 
@@ -7,9 +8,7 @@ import java.util.ArrayList;
 
 public class MessageProcessor extends MessageProcessorBase {
 
-    ArrayList<String> validatedSessions = new ArrayList<>();
-
-    private IServerHandlerMessenger serverHandler;
+    private IClientHandler handler;
 
     public void processMessage(String sessionId, String type, String data){
 
@@ -19,17 +18,13 @@ public class MessageProcessor extends MessageProcessorBase {
         handler.handleMessage(data, sessionId, getGson());
     }
 
-    public void sessionValidated(String sessionId){
-        validatedSessions.add(sessionId);
-    }
-
-    public MessageProcessor(IMessageHandlerFactory messageHandlerFactory, IServerHandlerMessenger serverHandler)
+    public MessageProcessor(IMessageHandlerFactory messageHandlerFactory, IClientHandler handler)
     {
         super(messageHandlerFactory);
-        this.serverHandler = serverHandler;
+        this.handler = handler;
     }
 
-    public IServerHandlerMessenger getHandler(){
-        return serverHandler;
+    public IClientHandler getHandler(){
+        return handler;
     }
 }
