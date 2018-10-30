@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea838ec-53ba-47e0-babc-e109460e340f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UnitManagerServer.java" afterPath="$PROJECT_DIR$/src/main/java/UnitManagerServer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java" afterPath="$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java" afterPath="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,11 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="590">
+              <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +56,8 @@
       <file leaf-file-name="IMessageGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="126">
+              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/SignInMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/MessageRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/MessageConcludeOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageConfirmOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messagehandlers/MessageHandler.java" />
@@ -104,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/main/java/UnitManagerServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java" />
       </list>
     </option>
   </component>
@@ -170,6 +184,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="clienthandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitManagerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitManagerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitManagerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitManagerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+              <item name="messagegenerator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitManagerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitManagerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -311,7 +351,7 @@
       <workItem from="1540374770645" duration="158000" />
       <workItem from="1540818817620" duration="173000" />
       <workItem from="1540819020295" duration="6346000" />
-      <workItem from="1540885070583" duration="6214000" />
+      <workItem from="1540885070583" duration="6963000" />
     </task>
     <task id="LOCAL-00001" summary="messages">
       <created>1539074533854</created>
@@ -324,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26035000" />
+    <option name="totallyTimeSpent" value="26784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -379,6 +419,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -412,6 +453,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -445,6 +487,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -498,6 +541,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -575,13 +619,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/communication/websockets/IClientWebsocket.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/unitmessages/FinishOrderMessage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/ConfirmOrderMessage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageConfirmOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -625,18 +662,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/sharedmessages/MessageOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -714,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UnitManagerServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
@@ -740,10 +760,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/IMessageGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clienthandler/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="590">
+          <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messages/operatormessages/MessageUnitListUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/communication/messagegenerator/MessageGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

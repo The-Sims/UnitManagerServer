@@ -28,6 +28,7 @@ public class ClientHandler implements IClientHandler {
     public void register(String sessionId, String unitName) {
         String[] unit = {sessionId, unitName};
         units.add(unit);
+        messageGenerator.sendUnitListUpdate(units);
     }
 
     @Override
