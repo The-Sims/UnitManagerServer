@@ -14,11 +14,6 @@ public class MessageGenerator implements IMessageGenerator {
         this.serverSocket = serverSocket;
     }
 
-    public void sendKill(String playerId) {
-        Object msg = new Object();
-        serverSocket.sendTo(playerId, msg);
-    }
-
     @Override
     public void sendOrder(ArrayList<String> unitId, MessageOrder order) {
         String[] temp = new String[unitId.size()];

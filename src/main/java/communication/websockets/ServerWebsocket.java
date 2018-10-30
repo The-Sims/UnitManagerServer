@@ -9,7 +9,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@ServerEndpoint(value="/submarine/websocket/")
+@ServerEndpoint(value="/unitmanagerserver/websocket/")
 public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
 
     private static ArrayList<Session> sessions = new ArrayList<>();
@@ -17,6 +17,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     @OnOpen
     public void onConnect(Session session) {
         sessions.add(session);
+        System.out.println("[Connected] SessionID:" + session.getId());
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
     }
 
