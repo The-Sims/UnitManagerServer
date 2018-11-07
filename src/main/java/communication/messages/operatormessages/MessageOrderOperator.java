@@ -1,22 +1,25 @@
 package communication.messages.operatormessages;
 
+import communication.messages.unitmessages.MessageOrder;
+import models.Unit;
+
 import java.util.ArrayList;
 
 public class MessageOrderOperator {
-    ArrayList<String> unitIds;
+    ArrayList<Unit> units;
     int orderId;
     String incidentTitle;
     String location;
 
-    public MessageOrderOperator(ArrayList<String> unitIds, int orderId, String incidentTitle, String location){
-        this.unitIds=unitIds;
+    public MessageOrderOperator(ArrayList<Unit> units, int orderId, String incidentTitle, String location){
+        this.units=units;
         this.orderId=orderId;
         this.incidentTitle=incidentTitle;
         this.location=location;
     }
 
-    public ArrayList<String> getUnitIds() {
-        return unitIds;
+    public ArrayList<Unit> getUnits() {
+        return units;
     }
 
     public int getOrderId() {
@@ -29,5 +32,9 @@ public class MessageOrderOperator {
 
     public String getLocation() {
         return location;
+    }
+
+    public MessageOrder convertToUnitMessage(String operatorId){
+        return new MessageOrder(operatorId, orderId, incidentTitle, location);
     }
 }

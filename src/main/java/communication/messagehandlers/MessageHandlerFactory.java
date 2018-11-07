@@ -13,8 +13,8 @@ public class MessageHandlerFactory implements IMessageHandlerFactory {
                 return new MessageConcludeOrderHandler(handler);
             case "MessageConfirmOrder":
                 return new MessageConfirmOrderHandler(handler);
-            case "MessageOrder":
-                return new MessageOrderHandler(handler);
+            case "MessageOrderOperator":
+                return new MessageOrderOperatorHandler(handler);
             case "MessageRegister":
                 return new MessageRegisterHandler(handler);
             default:

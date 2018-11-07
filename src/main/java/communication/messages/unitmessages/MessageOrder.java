@@ -1,5 +1,7 @@
 package communication.messages.unitmessages;
 
+import communication.messages.operatormessages.MessageOrderOperator;
+
 import java.util.ArrayList;
 
 public class MessageOrder {

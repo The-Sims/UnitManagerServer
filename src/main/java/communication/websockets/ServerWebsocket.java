@@ -21,7 +21,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
         System.out.println("[Connected] SessionID:" + session.getId());
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
 
-        MessageOrder msg = new MessageOrder("derp", null, 666, "Testing this garbage", "here");
+        MessageOrder msg = new MessageOrder("derp", 666, "Testing this garbage", "here");
         sendTo(session.getId(), msg);
     }
 
