@@ -1,15 +1,17 @@
 package communication.messages.operatormessages;
 
+import models.Unit;
+
 import java.util.ArrayList;
 
 public class MessageUnitListUpdate {
-    ArrayList<String[]> unitIds=new ArrayList<>();
+    ArrayList<Unit> unitIds=new ArrayList<>();
 
-    public MessageUnitListUpdate(ArrayList<String[]> unitIds){
+    public MessageUnitListUpdate(ArrayList<Unit> unitIds){
         this.unitIds=unitIds;
     }
 
-    public ArrayList<String[]> getUnitIds() {
+    public ArrayList<Unit> getUnitIds() {
         return unitIds;
     }
 }

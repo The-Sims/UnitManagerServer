@@ -1,16 +1,14 @@
-package communication.messages.sharedmessages;
+package communication.messages.operatormessages;
 
-public class MessageConfirmOrder {
+public class MessageConfirmOrderOperator {
 
-    String operatorId;
     String unitId;
     String unitName;
     int orderId;
     String reason;
     boolean accepted;
 
-    public MessageConfirmOrder(String operatorId, String unitId, String unitName, int orderId, String reason, boolean accepted){
-        this.operatorId=operatorId;
+    public MessageConfirmOrderOperator(String unitId, String unitName, int orderId, String reason, boolean accepted){
         this.unitId=unitId;
         this.unitName=unitName;
         this.orderId=orderId;
@@ -18,7 +16,6 @@ public class MessageConfirmOrder {
         this.accepted=accepted;
     }
 
-    public String getOperatorId() {return operatorId;}
     public String getUnitId() {return unitId;}
     public String getUnitName() {return unitName;}
     public int getOrderId(){return orderId;}

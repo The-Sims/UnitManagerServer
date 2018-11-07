@@ -1,8 +1,9 @@
 package communication.messagegenerator;
 
 import communication.messages.operatormessages.MessageUnitListUpdate;
-import communication.messages.sharedmessages.MessageOrder;
+import communication.messages.unitmessages.MessageOrder;
 import communication.websockets.IServerWebsocket;
+import models.Unit;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ public class MessageGenerator implements IMessageGenerator {
     }
 
     @Override
-    public void sendUnitListUpdate(ArrayList<String[]> units) {
+    public void sendUnitListUpdate(ArrayList<Unit> units) {
         MessageUnitListUpdate msg = new MessageUnitListUpdate(units);
         serverSocket.broadcast(msg);
     }

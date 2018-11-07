@@ -1,6 +1,7 @@
 package communication.websockets;
 
 import communication.messages.EncapsulatingMessage;
+import communication.messages.unitmessages.MessageOrder;
 import logger.LogLevel;
 import logger.Logger;
 
@@ -19,6 +20,9 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
         sessions.add(session);
         System.out.println("[Connected] SessionID:" + session.getId());
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
+
+        MessageOrder msg = new MessageOrder("derp", null, 666, "Testing this garbage", "here");
+        sendTo(session.getId(), msg);
     }
 
     @OnMessage
@@ -36,12 +40,14 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
 
     @OnError
     public void onError(Throwable cause, Session session) {
+        System.out.println("[ERROR] SessionID:" + session.getId() + "ERROR: " + cause.getMessage());
         Logger.getInstance().log(cause.getMessage(), LogLevel.ERROR);
     }
 
     public void sendTo(String sessionId, Object object)
     {
         String msg = getEncapsulatingMessageGenerator().generateMessageString(object);
+        System.out.println("Sending: " + msg);
         sendToClient(getSessionFromId(sessionId), msg);
     }
 

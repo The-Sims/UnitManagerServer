@@ -1,7 +1,7 @@
 package communication.messagehandlers;
 
 import clienthandler.IClientHandler;
-import communication.messages.sharedmessages.MessageOrder;
+import communication.messages.unitmessages.MessageOrder;
 
 public class MessageOrderHandler extends MessageHandler<MessageOrder> {
 

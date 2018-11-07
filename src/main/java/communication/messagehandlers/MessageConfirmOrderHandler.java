@@ -1,7 +1,7 @@
 package communication.messagehandlers;
 
 import clienthandler.IClientHandler;
-import communication.messages.sharedmessages.MessageConfirmOrder;
+import communication.messages.unitmessages.MessageConfirmOrder;
 
 public class MessageConfirmOrderHandler extends MessageHandler<MessageConfirmOrder>{
 

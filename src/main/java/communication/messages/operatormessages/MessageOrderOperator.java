@@ -1,24 +1,18 @@
-package communication.messages.sharedmessages;
+package communication.messages.operatormessages;
 
 import java.util.ArrayList;
 
-public class MessageOrder {
-    String operatorId;
+public class MessageOrderOperator {
     ArrayList<String> unitIds;
     int orderId;
     String incidentTitle;
     String location;
 
-    public MessageOrder(String operatorId, ArrayList<String> unitIds, int orderId, String incidentTitle, String location){
-        this.operatorId=operatorId;
+    public MessageOrderOperator(ArrayList<String> unitIds, int orderId, String incidentTitle, String location){
         this.unitIds=unitIds;
         this.orderId=orderId;
         this.incidentTitle=incidentTitle;
         this.location=location;
-    }
-
-    public String getOperatorId() {
-        return operatorId;
     }
 
     public ArrayList<String> getUnitIds() {

@@ -1,15 +1,17 @@
 package clienthandler;
 
 import communication.messagegenerator.IMessageGenerator;
-import communication.messages.sharedmessages.MessageConfirmOrder;
-import communication.messages.sharedmessages.MessageOrder;
+import communication.messages.unitmessages.MessageConfirmOrder;
+import communication.messages.unitmessages.MessageOrder;
 import communication.messages.unitmessages.MessageConcludeOrder;
+import models.Unit;
 
 import java.util.ArrayList;
 
 public class ClientHandler implements IClientHandler {
     IMessageGenerator messageGenerator;
-    ArrayList<String[]> units = new ArrayList<>();
+    ArrayList<Unit> units = new ArrayList<>();
+
 
     public ClientHandler(IMessageGenerator messageGenerator){this.messageGenerator=messageGenerator;}
 
@@ -26,7 +28,7 @@ public class ClientHandler implements IClientHandler {
 
     @Override
     public void register(String sessionId, String unitName) {
-        String[] unit = {sessionId, unitName};
+        Unit unit = new Unit(sessionId, unitName, true);
         units.add(unit);
         messageGenerator.sendUnitListUpdate(units);
     }
