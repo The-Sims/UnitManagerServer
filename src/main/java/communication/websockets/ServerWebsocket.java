@@ -1,7 +1,10 @@
 package communication.websockets;
 
 import communication.messages.EncapsulatingMessage;
+import communication.messages.unitmessages.MessageConcludeOrder;
+import communication.messages.unitmessages.MessageConfirmOrder;
 import communication.messages.unitmessages.MessageOrder;
+import communication.messages.unitmessages.MessageRegister;
 import logger.LogLevel;
 import logger.Logger;
 
@@ -21,7 +24,15 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
         System.out.println("[Connected] SessionID:" + session.getId());
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
 
-        MessageOrder msg = new MessageOrder("derp", 666, "Testing this garbage", "here");
+        Object msg = new MessageOrder("derp", 666, "Testing this garbage", "here");
+        sendTo(session.getId(), msg);
+        msg = new MessageRegister("DEEEEERRRRP");
+        sendTo(session.getId(), msg);
+        msg = new MessageConcludeOrder(666, "Nope, this bitch is dead");
+        sendTo(session.getId(), msg);
+        msg = new MessageConfirmOrder("GG", 66, "Nope, she's dead", false);
+        sendTo(session.getId(), msg);
+        msg = "WORK YOU STUPID MACHINE";
         sendTo(session.getId(), msg);
     }
 
