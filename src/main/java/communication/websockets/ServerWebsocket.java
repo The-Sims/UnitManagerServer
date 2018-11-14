@@ -21,18 +21,9 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     @OnOpen
     public void onConnect(Session session) {
         sessions.add(session);
-        System.out.println("[Connected] SessionID:" + session.getId());
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
 
-        Object msg = new MessageOrder("derp", 666, "Testing this garbage", "here");
-        sendTo(session.getId(), msg);
-        msg = new MessageRegister("DEEEEERRRRP");
-        sendTo(session.getId(), msg);
-        msg = new MessageConcludeOrder(666, "Nope, this bitch is dead");
-        sendTo(session.getId(), msg);
-        msg = new MessageConfirmOrder("GG", 66, "Nope, she's dead", false);
-        sendTo(session.getId(), msg);
-        msg = "WORK YOU STUPID MACHINE";
+        Object msg = new MessageOrder("-1", -1, "nop", "here");
         sendTo(session.getId(), msg);
     }
 
@@ -51,14 +42,13 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
 
     @OnError
     public void onError(Throwable cause, Session session) {
-        System.out.println("[ERROR] SessionID:" + session.getId() + "ERROR: " + cause.getMessage());
         Logger.getInstance().log(cause.getMessage(), LogLevel.ERROR);
     }
 
     public void sendTo(String sessionId, Object object)
     {
         String msg = getEncapsulatingMessageGenerator().generateMessageString(object);
-        System.out.println("Sending: " + msg);
+        Logger.getInstance().log("sending message: " + msg, LogLevel.INFORMATION);
         sendToClient(getSessionFromId(sessionId), msg);
     }
 
