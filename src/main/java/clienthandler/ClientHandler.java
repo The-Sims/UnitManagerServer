@@ -1,10 +1,13 @@
 package clienthandler;
 
 import communication.messagegenerator.IMessageGenerator;
+import communication.messages.operatormessages.MessageConfirmOrderOperator;
 import communication.messages.operatormessages.MessageOrderOperator;
 import communication.messages.unitmessages.MessageConfirmOrder;
 import communication.messages.unitmessages.MessageOrder;
 import communication.messages.unitmessages.MessageConcludeOrder;
+import logger.LogLevel;
+import logger.Logger;
 import models.Unit;
 
 import java.util.ArrayList;
@@ -36,7 +39,8 @@ public class ClientHandler implements IClientHandler {
                 i = units.size();
             }
         }
-        messageGenerator.sendConfirmOrder(message.getOperatorId(), message.convertToOperatorMessage(units.get(o)));
+        if(o != -1)
+            messageGenerator.sendConfirmOrder(message.getOperatorId(), message.convertToOperatorMessage(units.get(o)));
     }
 
     @Override

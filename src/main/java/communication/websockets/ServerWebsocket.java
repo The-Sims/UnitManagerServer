@@ -23,13 +23,14 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
         sessions.add(session);
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
 
-        Object msg = new MessageOrder("-1", -1, "nop", "here");
+        Object msg = new MessageOrder("-1", -1, "nop enzo, rip", "here");
         sendTo(session.getId(), msg);
     }
 
     @OnMessage
     public void onText(String message, Session session) {
         String sessionId = session.getId();
+        Logger.getInstance().log(sessionId + " send: " + message, LogLevel.INFORMATION);
         EncapsulatingMessage msg = getGson().fromJson(message, EncapsulatingMessage.class);
         getHandler().processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
     }

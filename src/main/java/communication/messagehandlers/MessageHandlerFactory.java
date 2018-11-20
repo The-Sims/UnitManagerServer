@@ -2,12 +2,13 @@ package communication.messagehandlers;
 
 
 import clienthandler.IClientHandler;
+import logger.LogLevel;
+import logger.Logger;
 
 public class MessageHandlerFactory implements IMessageHandlerFactory {
 
     public IMessageHandler getHandler(String simpleType, Object handlerIn) {
         IClientHandler handler = (IClientHandler) handlerIn;
-
         switch(simpleType){
             case "MessageConcludeOrder":
                 return new MessageConcludeOrderHandler(handler);

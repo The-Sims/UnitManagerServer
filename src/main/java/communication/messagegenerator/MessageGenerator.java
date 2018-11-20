@@ -4,6 +4,8 @@ import communication.messages.operatormessages.MessageConfirmOrderOperator;
 import communication.messages.operatormessages.MessageUnitListUpdate;
 import communication.messages.unitmessages.MessageOrder;
 import communication.websockets.IServerWebsocket;
+import logger.LogLevel;
+import logger.Logger;
 import models.Unit;
 
 import java.util.ArrayList;
@@ -31,6 +33,5 @@ public class MessageGenerator implements IMessageGenerator {
 
     @Override
     public void sendConfirmOrder(String operatorId, MessageConfirmOrderOperator message) {
-
     }
 }
