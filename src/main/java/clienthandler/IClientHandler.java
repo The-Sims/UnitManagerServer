@@ -9,6 +9,5 @@ public interface IClientHandler {
     void confirmOrder(String sessionId, MessageConfirmOrder message);
     void register(String sessionId, String unitName);
     void concludeOrder(String sessionId, MessageConcludeOrder message);
-
-
+    void disconnect(String sessionId);
 }

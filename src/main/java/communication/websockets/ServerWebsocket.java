@@ -22,9 +22,6 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     public void onConnect(Session session) {
         sessions.add(session);
         Logger.getInstance().log("[Connected] SessionID:" + session.getId(), LogLevel.INFORMATION);
-
-        Object msg = new MessageOrder("-1", -1, "nop enzo, rip", "here");
-        sendTo(session.getId(), msg);
     }
 
     @OnMessage
@@ -39,6 +36,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     public void onClose(CloseReason reason, Session session) {
         sessions.remove(session);
         Logger.getInstance().log("[Disconnected] SessionID:" + session.getId(), LogLevel.INFORMATION);
+        getHandler().processMessage(session.getId(), "disconnect", "disconnect");
     }
 
     @OnError
@@ -80,7 +78,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     {
         for (String sessionId : sessionIds){
             for(Session ses : sessions) {
-                if(!ses.getId().equals(sessionId))
+                if(ses.getId().equals(sessionId))
                     sendTo(ses.getId(), object);
             }
         }

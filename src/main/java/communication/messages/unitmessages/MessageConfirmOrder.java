@@ -25,7 +25,6 @@ public class MessageConfirmOrder {
     public boolean isAccepted(){return accepted;}
 
     public MessageConfirmOrderOperator convertToOperatorMessage(Unit unit){
-        Logger.getInstance().log("converter?", LogLevel.FATAL);
         return new MessageConfirmOrderOperator(unit, orderId, reason, accepted);
     }
 }

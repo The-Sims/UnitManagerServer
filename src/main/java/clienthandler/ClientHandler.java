@@ -23,9 +23,9 @@ public class ClientHandler implements IClientHandler {
     public void order(String sessionId, MessageOrderOperator message) {
         ArrayList<Unit> units = message.getUnits();
         ArrayList<String> unitIds = new ArrayList<>();
-        for(Unit u:units)
+        for(Unit u:units) {
             unitIds.add(u.getUnitId());
-
+        }
         messageGenerator.sendOrder(unitIds, message.convertToUnitMessage(sessionId));
     }
 
@@ -47,11 +47,29 @@ public class ClientHandler implements IClientHandler {
     public void register(String sessionId, String unitName) {
         Unit unit = new Unit(sessionId, unitName, true);
         units.add(unit);
-        messageGenerator.sendUnitListUpdate(units);
+        //messageGenerator.sendUnitListUpdate(units);
+
+
+        ArrayList<Unit> temp = new ArrayList<>();
+        temp.add(unit);
+        for (int i = 2; i<7; i++) {
+            MessageOrderOperator msg = new MessageOrderOperator(temp, i, "Problemen tijdens een oplevering"+i, "Fontys Hoge School");
+            order("-1", msg);
+        }
     }
 
     @Override
     public void concludeOrder(String sessionId, MessageConcludeOrder message) {
 
+    }
+
+    @Override
+    public void disconnect(String sessionId){
+        for(Unit u: units){
+            if (u.getUnitId().equals(sessionId)){
+                units.remove(u);
+                Logger.getInstance().log("Removing unit:"+u.getUnitName(), LogLevel.INFORMATION);
+            }
+        }
     }
 }
