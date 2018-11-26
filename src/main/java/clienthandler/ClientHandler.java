@@ -62,7 +62,7 @@ public class ClientHandler implements IClientHandler {
 
     @Override
     public void concludeOrder(String sessionId, MessageConcludeOrder message) {
-        //todo conclude order
+        messageGenerator.sendConcludeOrder(message);
     }
 
     @Override

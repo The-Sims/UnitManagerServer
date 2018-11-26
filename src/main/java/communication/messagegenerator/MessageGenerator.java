@@ -2,6 +2,7 @@ package communication.messagegenerator;
 
 import communication.messages.operatormessages.MessageConfirmOrderOperator;
 import communication.messages.operatormessages.MessageUnitListUpdate;
+import communication.messages.unitmessages.MessageConcludeOrder;
 import communication.messages.unitmessages.MessageOrder;
 import communication.websockets.IServerWebsocket;
 import logger.LogLevel;
@@ -33,6 +34,11 @@ public class MessageGenerator implements IMessageGenerator {
 
     @Override
     public void sendConfirmOrder(String operatorId, MessageConfirmOrderOperator message) {
-        //todo confirm order
+        serverSocket.sendTo(operatorId, message);
+    }
+
+    @Override
+    public void sendConcludeOrder(MessageConcludeOrder message){
+        serverSocket.broadcast(message);
     }
 }
