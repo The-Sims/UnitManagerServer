@@ -33,5 +33,6 @@ public class MessageGenerator implements IMessageGenerator {
 
     @Override
     public void sendConfirmOrder(String operatorId, MessageConfirmOrderOperator message) {
+        //todo confirm order
     }
 }
