@@ -27,7 +27,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     @OnMessage
     public void onText(String message, Session session) {
         String sessionId = session.getId();
-        Logger.getInstance().log(sessionId + " send: " + message, LogLevel.INFORMATION);
+        Logger.getInstance().log(sessionId + " send: " + message, LogLevel.RECEIVEDMESSAGE);
         EncapsulatingMessage msg = getGson().fromJson(message, EncapsulatingMessage.class);
         getHandler().processMessage(sessionId, msg.getMessageType(), msg.getMessageData());
     }
