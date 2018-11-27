@@ -48,6 +48,7 @@ public class ServerWebsocket extends WebsocketBase implements IServerWebsocket {
     {
         String msg = getEncapsulatingMessageGenerator().generateMessageString(object);
         Logger.getInstance().log("sending message: " + msg, LogLevel.INFORMATION);
+        Logger.getInstance().log("to id: " + sessionId, LogLevel.INFORMATION);
         sendToClient(getSessionFromId(sessionId), msg);
     }
 
