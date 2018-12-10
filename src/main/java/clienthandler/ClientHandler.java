@@ -49,14 +49,18 @@ public class ClientHandler implements IClientHandler {
         units.add(unit);
         messageGenerator.sendUnitListUpdate(units);
 
+        ArrayList<Unit> temp = new ArrayList<>();
+        temp.add(unit);
+        MessageOrderOperator msg = new MessageOrderOperator(temp, 0, "REEEEEEE", "Fontys");
+        order("-1", msg);
 
         //region todo remove temp messaging
-        ArrayList<Unit> temp = new ArrayList<>();
+        /*ArrayList<Unit> temp = new ArrayList<>();
         temp.add(unit);
         for (int i = 2; i<7; i++) {
             MessageOrderOperator msg = new MessageOrderOperator(temp, i, "Problemen tijdens een oplevering"+i, "Fontys Hoge School");
             order("-1", msg);
-        }
+        }*/
         //endregion
     }
 
