@@ -51,7 +51,7 @@ public class ClientHandler implements IClientHandler {
 
         ArrayList<Unit> temp = new ArrayList<>();
         temp.add(unit);
-        MessageOrderOperator msg = new MessageOrderOperator(temp, 0, "REEEEEEE", "Fontys");
+        MessageOrderOperator msg = new MessageOrderOperator(temp, 0, "Meer problemen tijdens de oplevering", "Fontys");
         order("-1", msg);
 
         //region todo remove temp messaging
