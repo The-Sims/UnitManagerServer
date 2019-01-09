@@ -2,6 +2,7 @@ package communication.messagehandlers;
 
 
 import clienthandler.IClientHandler;
+import communication.messages.operatormessages.MessageConnectAsOperator;
 import logger.LogLevel;
 import logger.Logger;
 
@@ -18,6 +19,8 @@ public class MessageHandlerFactory implements IMessageHandlerFactory {
                 return new MessageOrderOperatorHandler(handler);
             case "MessageRegister":
                 return new MessageRegisterHandler(handler);
+            case "MessageConnectAsOperator":
+                return new MessageConnectAsOperatorHandler(handler);
             default:
                 return null;
         }

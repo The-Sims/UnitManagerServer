@@ -17,6 +17,11 @@ public class MessageProcessor extends MessageProcessorBase {
             return;
         }
 
+        if(type.equals("Connect")){
+            handler.requestUnits();
+            return;
+        }
+
         String simpleType = type.split("\\.")[type.split("\\.").length - 1];
 
         IMessageHandler handler = getMessageHandlerFactory().getHandler(simpleType, getHandler());

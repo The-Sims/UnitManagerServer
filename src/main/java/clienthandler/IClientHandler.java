@@ -10,4 +10,5 @@ public interface IClientHandler {
     void register(String sessionId, String unitName);
     void concludeOrder(String sessionId, MessageConcludeOrder message);
     void disconnect(String sessionId);
+    void requestUnits();
 }

@@ -78,4 +78,10 @@ public class ClientHandler implements IClientHandler {
             }
         }
     }
+
+    @Override
+    public void requestUnits(){
+        if (units.size() != 0)
+            messageGenerator.sendUnitListUpdate(units);
+    }
 }
